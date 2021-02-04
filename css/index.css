@@ -1,0 +1,679 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+nav ul,
+.main-info-section,
+.work-category{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+body{
+    background-color: #291B29;
+}
+
+header h1,
+header a,
+.text p,
+.about h1,
+.skills h1,
+.work h1,
+.contact h1{
+    color: #707070;
+}
+
+.navbar{
+    background-color: #181818;
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    left: 0;
+    right: 0;
+    transition: .4s;
+}
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.header-left{
+    display: block;
+}
+
+header h1,
+header a{
+    color: #707070;
+    transition: .4s;
+}
+header h1:hover,
+header a:hover{
+    color: #ED55ED;
+}
+
+.lgo h1 a{
+    font-size: 1em;
+    text-transform: none;
+    padding: 20px 0;
+}
+
+nav ul{
+    height: 100%;
+}
+
+li{
+    list-style: none;
+    transition: .4s;
+}
+li:hover{
+    background-color: #444;
+}
+
+a{
+    display: flex;
+    text-decoration: none;
+    font-size: .9rem;
+    text-transform: uppercase;
+    padding: 30px 0;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.leftbar{
+    display: none;
+    background-color: #181818;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 101;
+}
+
+.ul-leftbar{
+    display: block;
+}
+
+.ul-leftbar li{
+    padding: 15px 0;
+    width: 200px;
+}
+
+/*.banner{
+    background: url("img/ReZero-Light.jpg") no-repeat center;
+    background-size: cover;
+    margin-top: 77px;
+    min-height: 580px;
+}*/
+
+.main-info-section{
+    /*height: calc(100vh - 81.6px);*/
+    margin-top: 100px;
+}
+
+.text h1{
+    color: #fff;
+    cursor: context-menu;
+}
+
+.text span{
+    display: inline-block;
+}
+
+span:hover{
+    color: #48CFAD;
+    transition: all .5s;
+}
+
+span.name{
+    color: #ED55ED;
+}
+
+span.m-left{
+    margin-left: -10px;
+}
+
+.text p{
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    font-size: .8rem;
+}
+
+.text a{
+    padding: 12px 25px;
+    background-color: none;
+    border: 3px solid #ED55ED;
+    color: #ED55ED;
+    font-size: .8rem;
+    letter-spacing: 2px;
+    position: relative;
+    top: 80px;
+    overflow: hidden;
+    transition: .5s;
+    display: inline-block;
+}
+
+.text a:hover{
+    color: #fff;
+}
+
+.text a::before{
+    content: '';
+    background-color: #ED55ED;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    z-index: -1;
+    transition: .5s;
+}
+
+.text a:hover::before{
+    height: 100%;
+}
+
+
+.about{
+    height: 100vh;
+    background: url("/img/wallhaven-rd3xvm.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.about h1,
+.work h1{
+    font-size: 10rem;
+    z-index: 0;
+    opacity: .5;
+    transition: .4s;
+}
+.about h1:hover,
+.work h1:hover{
+    opacity: .9;
+    color: #ED55ED;
+}
+
+.about .myphoto{
+    width: 150px;
+    box-shadow: 0 0 1.2rem rgba(0, 0, 0, .25);
+    border: 6px solid #fff;
+    border-radius: 100px;
+    position: relative;
+    top: -30px;
+    z-index: 2;
+    left: calc(50% - 100px);
+    right: calc(50% - 100px);
+    transform: translateX(calc(-50% + 100px));
+}
+
+.about-me-info{
+    max-width: 900px;
+    background-color: #252627;
+    box-shadow: 0 0 1.2rem rgba(0, 0, 0, .25);
+    position: relative;
+    top: -70px;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.about-me-info p{
+    font-size: 1.3rem;
+    color: #BEBEBE;
+}
+
+.about-me-info p:nth-child(2),
+.about-me-info p:last-child{
+    margin-top: 30px;
+}
+
+/*.about img{
+    width: 300px;
+    top: -300px;
+    left: calc(100% - 100px);
+    right: calc(100% - 100px);
+    transform: translateX(calc(-100% + 100px));
+}*/
+
+.skills{
+    margin-top: 100px;
+}
+
+.skills h1,
+.contact h1{
+    text-align: right;
+    font-size: 10rem;
+    opacity: .5;
+    transition: .4s;
+}
+.skills h1:hover,
+.contact h1:hover{
+    opacity: .9;
+    color: #ED55ED;
+}
+
+.skills-info{
+    font-size: 1.4rem;
+    color: #BEBEBE;
+    max-width: 800px;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.bar{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.progressbar{
+    margin-bottom: 40px;
+    position: relative;
+    width: 600px;
+    height: 20px;
+    border: 2px solid #48CFAD;
+    border-radius: 20px;
+    margin-top: 7px;
+}
+
+div[class^='bar-']{
+    position: absolute;
+    background-color: #48CFAD;
+    height: 10px;
+    border-radius: 20px;
+    margin: 2.8px;
+}
+
+.bar-html,
+.bar-css,
+.bar-javascript,
+.bar-react{
+    width: calc(0% - 6px);
+}
+
+.work-category button{
+    text-transform: capitalize;
+    border: 3px solid #ED55ED;
+    padding: 15px 30px;
+    border-radius: 50px;
+    color: #ED55ED;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    background-color: #291B29;
+    outline: none;
+    cursor: pointer;
+}
+
+.work-category .active{
+    background-color: #ED55ED;
+}
+
+button.active{
+    color: #fff;
+}
+
+form input,
+form textarea{
+    display: block;
+    padding: 20px;
+    background-color: #291B29;
+    border: 3px solid #707070;
+    margin: 20px 0;
+    outline: none;
+    font-size: 1.2rem;
+    color: #fff;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+}
+
+form input:last-child{
+    width: 150px;
+    background-color: none;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity .3s;
+}
+form input:last-child:hover{
+    opacity: .5;
+}
+
+.footer hr{
+    border: 2px solid #707070;
+    margin-top: 80px;
+}
+
+.footer p{
+    text-align: center;
+    color: #707070;
+    font-size: 1.2rem;
+    padding: 30px 0;
+}
+
+.resultado{
+    display: none;
+    width: 70%;
+    margin: 20px 15% 10px 15%;
+    background-color: #ffd5ff;
+    text-align: center;
+    padding: 15px;
+    border: 2px solid #ED55ED;
+}
+
+.tabela-crud{
+    width: 100%;
+    text-align: center;
+    border: 3px solid #48CFAD;
+}
+
+.tabela-crud tr:first-child{
+    font-weight: bold;
+    font-size: 25px;
+}
+.tabela-crud tr:nth-child(2n -1){
+    background-color: #CCC;
+}
+.tabela-crud tr:nth-child(2n){
+    color: #707070;
+}
+.tabela-crud td{
+    width: 25%;
+    height: 50px;
+}
+.tabela-crud td a{
+    display: inline-block;
+    color: #ED55ED;
+    width: min-content;
+    padding: 0;
+}
+
+@media screen and (max-width: 480px) {
+    .container{
+        padding: 0 15px 0 15px;
+    }
+
+    .about h1,
+    .work h1,
+    .skills h1,
+    .contact h1{
+        text-align: left;
+        font-size: 5rem;
+    }
+
+    .navbar{
+        width: 100%;
+        bottom: 0;
+        padding: 0;
+    }
+
+    .lgo,
+    .aLeftbar{
+        display: none;
+    }
+
+    nav{
+        width: 100%;
+    }
+
+    li{
+        width: 25%;
+    }
+
+    .leftbar{
+        margin-top: -77px;
+    }
+
+    .about{
+        margin-top: 0;
+        min-height: 740px;
+    }
+    .about-me-info{
+        padding: 30px;
+    }
+
+    .text{
+        margin-top: 0px;
+    }
+    .text h1{
+        font-size: 2.5rem;
+    }
+
+    .profile-image img{
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    .skills-info{
+        padding: 10px;
+    }
+
+    .contact{
+        margin-top: 10px;
+    }
+
+    form input,
+    form textarea{
+        width: 310px;
+    }
+}
+
+/*Medium Smartphones*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .container{
+        padding: 0 20px 0 20px;
+    }
+
+    .about h1,
+    .work h1,
+    .skills h1,
+    .contact h1{
+        font-size: 7rem;
+    }
+
+    .navbar{
+        width: 100%;
+        bottom: 0;
+        padding: 0;
+    }
+
+    .lgo,
+    .aLeftbar{
+        display: none;
+    }
+
+    nav{
+        width: 100%;
+    }
+
+    li{
+        width: 25%;
+    }
+
+    .leftbar{
+        margin-top: -76px;
+    }
+
+    .about{
+        margin-top: 0;
+        min-height: 600px;
+    }
+    .about-me-info{
+        padding: 30px;
+    }
+
+    .text{
+        width: 100%;
+        margin-top: 50px;
+    }
+    .text h1{
+        /*justify-content: center;*/
+        font-size: 3rem;
+    }
+
+    .profile-image img{
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    .skills-info{
+        padding: 10px;
+    }
+
+    .contact{
+        margin-top: 10px;
+    }
+
+    form input,
+    form textarea{
+        width: 310px;
+    }
+}
+
+/*Large Smartphones and small notebooks*/
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+    .container{
+        padding: 0 10px 0 10px;
+        /*border: 3px solid #ED5565;*/
+    }
+
+    .navbar{
+        top: 0;
+    }
+
+    li{
+        list-style: none;
+        width: 120px;
+        transition: .4s;
+    }
+
+    .leftbar{
+        margin-top: 77px;
+    }
+
+    .about{
+        margin-top: 77px;
+        min-height: 580px;
+    }
+    .about-me-info{
+        padding: 50px;
+    }
+
+    .text{
+        width: 100%;
+        margin-top: 120px;
+    }
+    .text h1{
+        font-size: 3rem;
+    }
+
+    .profile-image img{
+        width: 500px;
+        margin-top: 95px;
+        margin-left: 95px;
+    }
+
+    .skills{
+        height: 100vh;
+    }
+
+    .contact{
+        margin-top: 100px;
+    }
+
+    form input,
+    form textarea{
+        width: 500px;
+    }
+}
+
+/*XLarges Screens*/
+@media screen and (min-width: 1200px) {
+    .container{
+        padding: 0 100px 0 100px;
+        /*border: 3px solid #ED5565;*/
+    }
+
+    .navbar{
+        top: 0;
+    }
+    .navbar.sticky{
+        display: none;
+        position: fixed;
+        left: 0;
+        right: 0;
+        width: 100%;
+        transition: .4s;
+        padding: 10px 130px;
+    }
+    .navbar.sticky h1{
+        color: #707070;
+        transition: .6s;
+    }
+    .navbar.sticky a{
+        transition: .6s;
+    }
+
+    li{
+        list-style: none;
+        width: 150px;
+        transition: .4s;
+    }
+
+    .leftbar{
+        margin-top: 77px;
+    }
+
+    .text{
+        margin-top: 120px;
+    }
+    .text h1{
+        font-size: 3rem;
+    }
+
+    .about{
+        margin-top: 77px;
+        min-height: 580px;
+    }
+    .about-me-info{
+        padding: 50px;
+    }
+
+    .profile-image img{
+        width: 500px;
+        margin-top: 25px;
+    }
+
+    .skills{
+        height: 100vh;
+    }
+
+    .contact{
+        margin-top: 100px;
+    }
+
+    form input,
+    form textarea{
+        width: 500px;
+    }
+}
+
+.show{
+    display: block;
+}

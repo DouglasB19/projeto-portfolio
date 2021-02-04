@@ -1,0 +1,43 @@
+<div class="container navbar">
+    <header>
+        <div class="lgo">
+            <h1><a href="/login">Login</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/inserir">Cadastro</a></li>
+                <li><a href="/select">Seleção</a></li>
+                <li><a href="./enquete.php">Enquete</a></li>
+                <li><a href="/">Pagina inicial</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+
+<div class="container contact" id="contact">
+    <table class="tabela-crud">
+        <tr>
+            <td>Nome</td>
+            <td>Email</td>
+            <td>Comentário</td>
+            <td>Acões</td>
+        </tr>
+
+        <!-- Estrutura de loop -->
+
+        {{#data}}
+            <tr>
+                <td>{{Nome}}</td>
+                <td>{{Email}}</td>
+                <td>{{Comentario}}</td>
+                <td>
+                    <a href="/select/{{Id}}">Ver</a>
+                    <a href="/update/{{Id}}">Editar</a>
+                    <a class="deletar" href="/deletar/{{Id}}">Deletar</a>
+                </td>
+            </tr>
+        {{/data}}
+    </table>
+</div>
+
+<script src="/js/script.js"></script>

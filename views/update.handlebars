@@ -1,0 +1,30 @@
+<div class="container navbar">
+    <header>
+        <div class="lgo">
+            <h1><a href="/login">Login</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/inserir">Cadastro</a></li>
+                <li><a href="/select">Seleção</a></li>
+                <li><a href="./enquete.php">Enquete</a></li>
+                <li><a href="/">Pagina inicial</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+
+<div class="container contact" id="contact">
+    <div class="resultado"></div>
+    <h1>Atualizar</h1>
+    <form name="formCadastro" id="formCadastro" method="post" action="/controllerUpdate">
+        <input type="hidden" id="acao" name="acao" value="">
+        <input type="hidden" id="id" name="id" value="{{id}}">
+        <input type="text" name="name" id="name" placeholder="Full Name" value="{{name}}">
+        <input type="email" name="email" id="email" placeholder="Email" value="{{email}}">
+        <input type="email" placeholder="dou.bor.555@gmail.com" disabled>
+        <textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="Message">{{comentario}}</textarea>
+        <input type="submit" value="Cadastrar">
+    </form>
+    <div class="resultado"></div>
+</div>

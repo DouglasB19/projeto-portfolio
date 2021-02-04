@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='pt'>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/animate.css" rel="stylesheet" />
+
+    <title>CRUD NODEJS</title>
+</head>
+<body>
+
+    <div class="container navbar">
+        <header>
+            <div class="lgo">
+                <h1><a href="/login.html">Login</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/inserir.html">Cadastro</a></li>
+                    <li><a href="/select.html">Seleção</a></li>
+                    <li><a href="./enquete.php">Enquete</a></li>
+                    <li><a href="/">Pagina inicial</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    
+    <div class="container contact" id="contact">
+        <h1>Cadastro</h1>
+        <div class="resultado"></div>
+        <form name="formCadastro" id="formCadastro" method="post" action="http://localhost:3000/controllerForm">
+            <input type="hidden" id="acao" name="acao" value="">
+            <input type="hidden" id="id" name="id" value="">
+            <input type="text" name="name" id="name" placeholder="Full Name" value="">
+            <input type="email" name="email" id="email" placeholder="Email" value="">
+            <input type="email" placeholder="dou.bor.555@gmail.com" disabled>
+            <textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="Message"></textarea>
+            <input type="submit" value="Cadastrar">
+        </form>
+        <div class="resultado"></div>
+    </div>
+
+    <nav class="footer">
+        <hr>
+        <p>2020 Copyright. All Rights Reserved.</p>
+    </nav>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
