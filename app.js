@@ -6,7 +6,8 @@ const handlebars=require('express-handlebars');
 const crud=require('crud');
 const app=express();
 app.use(cors());
-const urlencodeParser=bodyParser.urlencoded({extended:false});
+//const urlencodeParser=express.urlencoded({extended:false});
+app.use(express.urlencoded({ extended: true }))
 let port=process.env.PORT || 3000;
 let cruds=new crud();
 
@@ -25,10 +26,10 @@ app.get("/",function(req,res){
 app.get("/login",function(req,res){res.render('login');});
 app.get("/inserir",function(req,res){res.render('inserir');});
 app.get("/select/:id?",function(req,res){cruds.read(req,res);});
-app.post("/controllerForm",urlencodeParser,function(req,res){cruds.create(req,res);});
+app.post("/controllerForm",/*urlencodeParser,*/function(req,res){console.log(req.body); /*cruds.create(req,res);*/});
 app.get("/deletar/:id",function(req,res){cruds.deletes(req,res);});
 app.get("/update/:id",function(req,res){cruds.update(req,res);});
-app.post("/controllerUpdate",urlencodeParser,function(req,res){cruds.update(req,res,'controller')});
+app.post("/controllerUpdate",/*urlencodeParser,*/function(req,res){cruds.update(req,res,'controller')});
 
 //Start server
 app.listen(port);

@@ -1,7 +1,13 @@
-(function readyJS(win, doc){
+(function readyJS(win,doc){
 'use strict';
 let lastScrollTop = 0;
 let barShow = false;
+
+let currentRotation = 360;
+
+let slideCount = 0;
+let timeClear;
+
 let header = doc.querySelector(".navbar");
 
 let btnbar = doc.querySelector(".btnbar");
@@ -10,15 +16,20 @@ let leftbar = doc.querySelector(".leftbar");
 let btnConta = doc.querySelector(".btnContact");
 let resultConta = doc.querySelector(".resultado");
 
-window.addEventListener("scroll", function(){
+let photoRotation = doc.querySelector(".myphoto");
+
+let btnSlide = doc.querySelectorAll(".btnSlide");
+let imgSlide = doc.querySelectorAll(".imgSlide");
+
+win.addEventListener("scroll", function(){
     //header.classList.toggle("sticky", window.scrollY > lastScrollTop);
     
     let scrollTop = window.pageYOffset || doc.documentElement.scrollTop;
     if(scrollTop > lastScrollTop && barShow == false){
-        header.classList.add("sticky");
+        header.classList.add("remove");
     }
     else{
-        header.classList.remove("sticky");
+        header.classList.remove("remove");
     }
     lastScrollTop = scrollTop;
 });
@@ -43,8 +54,15 @@ function EventContact(){
     }
 }
 
-btnConta.addEventListener("click", EventContact, false);
+function EventRotation(){
+    currentRotation += 360;
+    photoRotation.style.transform = 'translateX(calc(-50% + 100px)) rotate(' + currentRotation + 'deg)';
+}
+
 btnbar.addEventListener("click", btnLeftbar, false);
+btnConta.addEventListener("click", EventContact, false);
+photoRotation.addEventListener("click", EventRotation, false);
+
 
 const spans = doc.querySelectorAll('h1 span')
 spans.forEach(span => span.addEventListener('mouseover', function(e){
@@ -74,15 +92,39 @@ const scene = new ScrollMagic.Scene({
 .setTween(t1)
 .addTo(contoller)
 
-// const showRequiredCategory = event => {
-//     const links = doc.querySelectorAll('.work-category button');
-//     for(i = 0; i < links.length; i++){
-//         if(links[i].hasAttribute('class')){
-//             links[i].classList.remove('active');
-//         }
-//     }
+function clickSlide(event){
+    clearInterval(timeClear);
+    for(let i = 0; i < btnSlide.length; i++){
+        if(btnSlide[i].hasAttribute('class')){
+            btnSlide[i].classList.remove('active');
+            imgSlide[i].classList.remove('show');
+        }
+    }
+    slideCount = event.target.id;  
+    event.target.classList.add('active');
+    imgSlide[event.target.id].classList.add('show');
+    setTime();
+}
 
-//     event.classList.add('active');
-// }
+function showDivs(){
+    for(let i = 0; i < imgSlide.length; i++) {
+        btnSlide[i].classList.remove('active');
+        imgSlide[i].classList.remove('show');
+    }
+    slideCount++;  
+    if(slideCount == imgSlide.length){slideCount = 0}
+    btnSlide[slideCount].classList.add('active');
+    imgSlide[slideCount].classList.add('show');
+}
+
+function setTime(){
+    timeClear = setInterval(showDivs, 5000);
+}
+
+timeClear = setInterval(showDivs, 5000);
+
+for(let i = 0; i < btnSlide.length; i++){
+    btnSlide[i].addEventListener("click", clickSlide, false);
+}
 
 })(window,document);

@@ -182,7 +182,6 @@ span.m-left{
     height: 100%;
 }
 
-
 .about{
     height: 100vh;
     background: url("/img/wallhaven-rd3xvm.jpg") no-repeat center;
@@ -213,6 +212,9 @@ span.m-left{
     left: calc(50% - 100px);
     right: calc(50% - 100px);
     transform: translateX(calc(-50% + 100px));
+    transition: 1.4s;
+    perspective: 1000px;
+    transform-style: preserve-3d;
 }
 
 .about-me-info{
@@ -295,7 +297,7 @@ div[class^='bar-']{
     background-color: #48CFAD;
     height: 10px;
     border-radius: 20px;
-    margin: 2.8px;
+    margin: 2.9px;
 }
 
 .bar-html,
@@ -307,15 +309,15 @@ div[class^='bar-']{
 
 .work-category button{
     text-transform: capitalize;
-    border: 3px solid #ED55ED;
-    padding: 15px 30px;
     border-radius: 50px;
     color: #ED55ED;
-    font-size: 1.1rem;
-    letter-spacing: 1px;
     background-color: #291B29;
     outline: none;
     cursor: pointer;
+}
+
+.slide{
+    display: flex;
 }
 
 .work-category .active{
@@ -324,6 +326,17 @@ div[class^='bar-']{
 
 button.active{
     color: #fff;
+}
+
+.imgSlide{
+    display: none;
+    position: relative;
+    padding: 30px;
+    border-radius: 50px;
+    color: #ED55ED;
+    left: calc(50% - 100px);
+    right: calc(50% - 100px);
+    transform: translateX(calc(-50% + 100px));
 }
 
 form input,
@@ -375,6 +388,10 @@ form input:last-child:hover{
     text-align: center;
     padding: 15px;
     border: 2px solid #ED55ED;
+}
+
+tbody, tr, .contact{
+    overflow: auto;
 }
 
 .tabela-crud{
@@ -436,6 +453,10 @@ form input:last-child:hover{
         width: 25%;
     }
 
+    a{
+        font-size: .75rem;
+    }
+
     .leftbar{
         margin-top: -77px;
     }
@@ -445,27 +466,53 @@ form input:last-child:hover{
         min-height: 740px;
     }
     .about-me-info{
-        padding: 30px;
+        padding: 40px 30px;
+    }
+
+    .about-me-info p{
+        font-size: 1.1rem;
+        color: #BEBEBE;
     }
 
     .text{
         margin-top: 0px;
+        width: 100%;
     }
     .text h1{
         font-size: 2.5rem;
     }
 
-    .profile-image img{
+    .profile-image{
         width: 100%;
-        margin-top: 25px;
+    }
+
+    .profile-image img{
+        width: 200px;
+        margin-top: 95px;
+        position: relative;
+        left: calc(50% - 100px);
+        right: calc(50% - 100px);
+        transform: translateX(calc(-50% + 100px));
     }
 
     .skills-info{
         padding: 10px;
+        font-size: 1.2rem;
     }
 
     .contact{
         margin-top: 10px;
+    }
+
+    .work-category button{
+        border: 2px solid #ED55ED;
+        padding: 8px 8px;
+        font-size: 0.9rem;
+        letter-spacing: 0.1px;
+    }
+
+    .imgSlide{
+        height: 200px;
     }
 
     form input,
@@ -484,7 +531,7 @@ form input:last-child:hover{
     .work h1,
     .skills h1,
     .contact h1{
-        font-size: 7rem;
+        font-size: 6rem;
     }
 
     .navbar{
@@ -518,26 +565,51 @@ form input:last-child:hover{
         padding: 30px;
     }
 
+    .about-me-info p{
+        font-size: 1.2rem;
+        color: #BEBEBE;
+    }
+
     .text{
         width: 100%;
         margin-top: 50px;
     }
     .text h1{
         /*justify-content: center;*/
-        font-size: 3rem;
+        font-size: 2.5rem;
+    }
+
+    .profile-image{
+        width: 100%;
     }
 
     .profile-image img{
-        width: 100%;
-        margin-top: 25px;
+        width: 250px;
+        margin-top: 95px;
+        position: relative;
+        left: calc(50% - 100px);
+        right: calc(50% - 100px);
+        transform: translateX(calc(-50% + 100px));
     }
 
     .skills-info{
         padding: 10px;
+        font-size: 1.2rem;
     }
 
     .contact{
         margin-top: 10px;
+    }
+
+    .work-category button{
+        border: 2px solid #ED55ED;
+        padding: 10px 10px;
+        font-size: 1rem;
+        letter-spacing: 0.2px;
+    }
+
+    .imgSlide{
+        height: 250px;
     }
 
     form input,
@@ -575,18 +647,21 @@ form input:last-child:hover{
         padding: 50px;
     }
 
+    .main-info-section{
+        padding: 0 50px 0 50px;
+    }
+
     .text{
-        width: 100%;
         margin-top: 120px;
     }
     .text h1{
-        font-size: 3rem;
+        font-size: 2.4rem;
     }
 
     .profile-image img{
-        width: 500px;
+        width: 300px;
         margin-top: 95px;
-        margin-left: 95px;
+        margin-left: 40px;
     }
 
     .skills{
@@ -595,6 +670,17 @@ form input:last-child:hover{
 
     .contact{
         margin-top: 100px;
+    }
+
+    .work-category button{
+        border: 3px solid #ED55ED;
+        padding: 15px 30px;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+
+    .imgSlide{
+        height: 400px;
     }
 
     form input,
@@ -614,7 +700,6 @@ form input:last-child:hover{
         top: 0;
     }
     .navbar.sticky{
-        display: none;
         position: fixed;
         left: 0;
         right: 0;
@@ -668,6 +753,17 @@ form input:last-child:hover{
         margin-top: 100px;
     }
 
+    .work-category button{
+        border: 3px solid #ED55ED;
+        padding: 15px 30px;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+
+    .imgSlide{
+        height: 500px;
+    }
+
     form input,
     form textarea{
         width: 500px;
@@ -676,4 +772,8 @@ form input:last-child:hover{
 
 .show{
     display: block;
+}
+
+.remove{
+    display: none;
 }

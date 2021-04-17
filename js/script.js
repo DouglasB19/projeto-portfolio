@@ -40,6 +40,7 @@
         event.preventDefault();
         let ajax = new XMLHttpRequest();
         let params='id='+id.value && 'name='+this.name.value && 'email='+email.value && 'comentario='+comentario.value;
+        //let params=JSON.stringify({id: id.value, name: this.name.value, email: email.value, comentario: comentario.value});
         ajax.open('POST','http://localhost:3000/controllerForm');
         ajax.setRequestHeader('Content-type','application/x-www-form-urlencoded');
         ajax.onreadystatechange=function(){
@@ -48,6 +49,7 @@
                 result.innerHTML = ajax.responseText;
             }
         }
+        console.log(params);
         ajax.send(params);
     }
 

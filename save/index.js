@@ -17,13 +17,15 @@ class ClassCrud{
         if(!req.params.id){
             this.sql.getConnection(function(err,connection){
                 connection.query("select * from cadastro order by id asc",function(err,results,fields){
-                    res.render('select',{data:results});
+                    //res.json(results); //-- Para o sistema com json
+                    res.render('select',{data:results}); //-- Para o sistema aclopado
                 });
             });
         }else{
             this.sql.getConnection(function(err,connection){
                 connection.query("select * from cadastro where id=? order by id asc",[req.params.id],function(err,results,fields){
-                    res.render('select',{data:results});
+                    //res.json(results); //-- Para o sistema com json
+                    res.render('select',{data:results}); //-- Para o sistema aclopado
                 });
             });
         }
@@ -33,7 +35,8 @@ class ClassCrud{
     {
         this.sql.getConnection(function(err,connection){
             connection.query("insert into cadastro values (?,?,?,?)",[req.body.id,req.body.name,req.body.email,req.body.comentario]);
-            res.render('controllerForm');
+            //res.send('Cadastro mandando com sucesso'); //-- Para o sistema com json
+            res.render('controllerForm'); //-- Para o sistema aclopado
         });
     }
 
