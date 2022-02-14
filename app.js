@@ -3,13 +3,13 @@ const express=require('express');
 const bodyParser=require('body-parser');
 const cors=require('cors');
 const handlebars=require('express-handlebars');
-const crud=require('crud');
+//const crud=require('crud');
 const app=express();
 app.use(cors());
 //const urlencodeParser=express.urlencoded({extended:false});
 app.use(express.urlencoded({ extended: true }))
 let port=process.env.PORT || 3000;
-let cruds=new crud();
+//let cruds=new crud();
 
 //Template engine
 app.engine("handlebars",handlebars({defaultLayout:'main'}));
