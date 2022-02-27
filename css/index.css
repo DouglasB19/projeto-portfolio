@@ -117,7 +117,9 @@ a{
 
 .main-info-section{
     /*height: calc(100vh - 81.6px);*/
-    margin-top: 100px;
+    margin-top: 80px;
+    background: url("/img/wallhaven-rd3xvm.jpg") no-repeat center;
+    background-size: cover;
 }
 
 .text h1{
@@ -184,8 +186,6 @@ span.m-left{
 
 .about{
     height: 100vh;
-    background: url("/img/wallhaven-rd3xvm.jpg") no-repeat center;
-    background-size: cover;
 }
 
 .about h1,
@@ -248,7 +248,7 @@ span.m-left{
 }*/
 
 .skills{
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .skills h1,
@@ -732,9 +732,12 @@ tbody, tr, .contact{
         font-size: 3rem;
     }
 
+    .main-info-section{
+        min-height: 580px;
+    }
     .about{
         margin-top: 77px;
-        min-height: 580px;
+        min-height: 300px;
     }
     .about-me-info{
         padding: 50px;
@@ -742,7 +745,7 @@ tbody, tr, .contact{
 
     .profile-image img{
         width: 500px;
-        margin-top: 25px;
+        margin-top: 50px;
     }
 
     .skills{
