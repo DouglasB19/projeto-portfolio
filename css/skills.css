@@ -1,0 +1,85 @@
+.skills{
+    margin-top: 50px;
+}
+
+.skills h1,
+.contact h1{
+    text-align: right;
+    font-size: 10rem;
+    opacity: .5;
+    transition: .4s;
+}
+.skills h1:hover,
+.contact h1:hover{
+    opacity: .9;
+    color: #ED55ED;
+}
+
+.skills-info{
+    font-size: 1.4rem;
+    color: #BEBEBE;
+    max-width: 800px;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.bar{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.progressbar{
+    margin-bottom: 40px;
+    position: relative;
+    width: 600px;
+    height: 20px;
+    border: 2px solid #48CFAD;
+    border-radius: 20px;
+    margin-top: 7px;
+}
+
+div[class^='bar-']{
+    position: absolute;
+    background-color: #48CFAD;
+    height: 10px;
+    border-radius: 20px;
+    margin: 2.9px;
+}
+
+.bar-html,
+.bar-css,
+.bar-javascript,
+.bar-react{
+    width: calc(0% - 6px);
+}
+
+@media screen and (max-width: 480px) {
+    .skills-info{
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .skills-info{
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+    .skills{
+        height: 100vh;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .skills{
+        height: 100vh;
+    }
+}

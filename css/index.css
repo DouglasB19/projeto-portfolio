@@ -13,107 +13,15 @@ body{
     background-color: #291B29;
 }
 
-.work h1{
-    font-size: 10rem;
-    z-index: 0;
-    opacity: .5;
-    transition: .4s;
-}
-.work h1:hover{
-    opacity: .9;
-    color: #ED55ED;
-}
-
-.skills{
-    margin-top: 50px;
-}
-
-.skills h1,
 .contact h1{
     text-align: right;
     font-size: 10rem;
     opacity: .5;
     transition: .4s;
 }
-.skills h1:hover,
 .contact h1:hover{
     opacity: .9;
     color: #ED55ED;
-}
-
-.skills-info{
-    font-size: 1.4rem;
-    color: #BEBEBE;
-    max-width: 800px;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.bar{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.progressbar{
-    margin-bottom: 40px;
-    position: relative;
-    width: 600px;
-    height: 20px;
-    border: 2px solid #48CFAD;
-    border-radius: 20px;
-    margin-top: 7px;
-}
-
-div[class^='bar-']{
-    position: absolute;
-    background-color: #48CFAD;
-    height: 10px;
-    border-radius: 20px;
-    margin: 2.9px;
-}
-
-.bar-html,
-.bar-css,
-.bar-javascript,
-.bar-react{
-    width: calc(0% - 6px);
-}
-
-.work-category button{
-    text-transform: capitalize;
-    border-radius: 50px;
-    color: #ED55ED;
-    background-color: #291B29;
-    outline: none;
-    cursor: pointer;
-}
-
-.slide{
-    display: flex;
-}
-
-.work-category .active{
-    background-color: #ED55ED;
-}
-
-button.active{
-    color: #fff;
-}
-
-.imgSlide{
-    display: none;
-    position: relative;
-    padding: 30px;
-    border-radius: 50px;
-    color: #ED55ED;
-    left: calc(50% - 100px);
-    right: calc(50% - 100px);
-    transform: translateX(calc(-50% + 100px));
 }
 
 form input,
@@ -211,24 +119,8 @@ tbody, tr, .contact{
         font-size: 5rem;
     }
 
-    .skills-info{
-        padding: 10px;
-        font-size: 1.2rem;
-    }
-
     .contact{
         margin-top: 10px;
-    }
-
-    .work-category button{
-        border: 2px solid #ED55ED;
-        padding: 8px 8px;
-        font-size: 0.9rem;
-        letter-spacing: 0.1px;
-    }
-
-    .imgSlide{
-        height: 200px;
     }
 
     form input,
@@ -250,24 +142,8 @@ tbody, tr, .contact{
         font-size: 6rem;
     }
 
-    .skills-info{
-        padding: 10px;
-        font-size: 1.2rem;
-    }
-
     .contact{
         margin-top: 10px;
-    }
-
-    .work-category button{
-        border: 2px solid #ED55ED;
-        padding: 10px 10px;
-        font-size: 1rem;
-        letter-spacing: 0.2px;
-    }
-
-    .imgSlide{
-        height: 250px;
     }
 
     form input,
@@ -287,23 +163,8 @@ tbody, tr, .contact{
         padding: 0 50px 0 50px;
     }
 
-    .skills{
-        height: 100vh;
-    }
-
     .contact{
         margin-top: 100px;
-    }
-
-    .work-category button{
-        border: 3px solid #ED55ED;
-        padding: 15px 30px;
-        font-size: 1.1rem;
-        letter-spacing: 1px;
-    }
-
-    .imgSlide{
-        height: 400px;
     }
 
     form input,
@@ -319,23 +180,8 @@ tbody, tr, .contact{
         /*border: 3px solid #ED5565;*/
     }
 
-    .skills{
-        height: 100vh;
-    }
-
     .contact{
         margin-top: 100px;
-    }
-
-    .work-category button{
-        border: 3px solid #ED55ED;
-        padding: 15px 30px;
-        font-size: 1.1rem;
-        letter-spacing: 1px;
-    }
-
-    .imgSlide{
-        height: 500px;
     }
 
     form input,
