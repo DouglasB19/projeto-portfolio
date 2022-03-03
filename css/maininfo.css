@@ -1,0 +1,145 @@
+.main-info-section{
+    /*height: calc(100vh - 81.6px);*/
+    margin-top: 80px;
+    background: url("/img/wallhaven-rd3xvm.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.text h1{
+    color: #fff;
+    cursor: context-menu;
+}
+
+.text span{
+    display: inline-block;
+}
+
+span:hover{
+    color: #48CFAD;
+    transition: all .5s;
+}
+
+span.name{
+    color: #ED55ED;
+}
+
+span.m-left{
+    margin-left: -10px;
+}
+
+.text p{
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    font-size: .8rem;
+}
+
+.text a{
+    padding: 12px 25px;
+    background-color: none;
+    border: 3px solid #ED55ED;
+    color: #ED55ED;
+    font-size: .8rem;
+    letter-spacing: 2px;
+    position: relative;
+    top: 80px;
+    overflow: hidden;
+    transition: .5s;
+    display: inline-block;
+}
+
+.text a:hover{
+    color: #fff;
+}
+
+.text a::before{
+    content: '';
+    background-color: #ED55ED;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    z-index: -1;
+    transition: .5s;
+}
+
+.text a:hover::before{
+    height: 100%;
+}
+
+@media screen and (max-width: 480px) {
+    .text{
+        margin-top: 0px;
+        width: 100%;
+    }
+    .text h1{
+        font-size: 2.5rem;
+    }
+
+    .profile-image{
+        width: 100%;
+    }
+
+    .profile-image img{
+        width: 200px;
+        margin-top: 95px;
+        position: relative;
+        left: calc(50% - 100px);
+        right: calc(50% - 100px);
+        transform: translateX(calc(-50% + 100px));
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .text{
+        width: 100%;
+        margin-top: 50px;
+    }
+    .text h1{
+        /*justify-content: center;*/
+        font-size: 2.5rem;
+    }
+
+    .profile-image{
+        width: 100%;
+    }
+
+    .profile-image img{
+        width: 250px;
+        margin-top: 95px;
+        position: relative;
+        left: calc(50% - 100px);
+        right: calc(50% - 100px);
+        transform: translateX(calc(-50% + 100px));
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+    .text{
+        margin-top: 120px;
+    }
+    .text h1{
+        font-size: 2.4rem;
+    }
+
+    .profile-image img{
+        width: 300px;
+        margin-top: 95px;
+        margin-left: 40px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .main-info-section{
+        min-height: 580px;
+    }
+
+    .text{
+        margin-top: 120px;
+    }
+    
+    .text h1{
+        font-size: 3rem;
+    }
+
+}

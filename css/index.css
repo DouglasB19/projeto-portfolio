@@ -9,243 +9,20 @@ html{
     scroll-behavior: smooth;
 }
 
-nav ul,
-.main-info-section,
-.work-category{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
 body{
     background-color: #291B29;
 }
 
-header h1,
-header a,
-.text p,
-.about h1,
-.skills h1,
-.work h1,
-.contact h1{
-    color: #707070;
-}
-
-.navbar{
-    background-color: #181818;
-    width: 100%;
-    z-index: 100;
-    position: fixed;
-    left: 0;
-    right: 0;
-    transition: .4s;
-}
-
-header{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.header-left{
-    display: block;
-}
-
-header h1,
-header a{
-    color: #707070;
-    transition: .4s;
-}
-header h1:hover,
-header a:hover{
-    color: #ED55ED;
-}
-
-.lgo h1 a{
-    font-size: 1em;
-    text-transform: none;
-    padding: 20px 0;
-}
-
-nav ul{
-    height: 100%;
-}
-
-li{
-    list-style: none;
-    transition: .4s;
-}
-li:hover{
-    background-color: #444;
-}
-
-a{
-    display: flex;
-    text-decoration: none;
-    font-size: .9rem;
-    text-transform: uppercase;
-    padding: 30px 0;
-    text-align: center;
-    width: 100%;
-    justify-content: center;
-}
-
-.leftbar{
-    display: none;
-    background-color: #181818;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 101;
-}
-
-.ul-leftbar{
-    display: block;
-}
-
-.ul-leftbar li{
-    padding: 15px 0;
-    width: 200px;
-}
-
-/*.banner{
-    background: url("img/ReZero-Light.jpg") no-repeat center;
-    background-size: cover;
-    margin-top: 77px;
-    min-height: 580px;
-}*/
-
-.main-info-section{
-    /*height: calc(100vh - 81.6px);*/
-    margin-top: 80px;
-    background: url("/img/wallhaven-rd3xvm.jpg") no-repeat center;
-    background-size: cover;
-}
-
-.text h1{
-    color: #fff;
-    cursor: context-menu;
-}
-
-.text span{
-    display: inline-block;
-}
-
-span:hover{
-    color: #48CFAD;
-    transition: all .5s;
-}
-
-span.name{
-    color: #ED55ED;
-}
-
-span.m-left{
-    margin-left: -10px;
-}
-
-.text p{
-    letter-spacing: 3px;
-    word-spacing: 10px;
-    font-size: .8rem;
-}
-
-.text a{
-    padding: 12px 25px;
-    background-color: none;
-    border: 3px solid #ED55ED;
-    color: #ED55ED;
-    font-size: .8rem;
-    letter-spacing: 2px;
-    position: relative;
-    top: 80px;
-    overflow: hidden;
-    transition: .5s;
-    display: inline-block;
-}
-
-.text a:hover{
-    color: #fff;
-}
-
-.text a::before{
-    content: '';
-    background-color: #ED55ED;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 0%;
-    z-index: -1;
-    transition: .5s;
-}
-
-.text a:hover::before{
-    height: 100%;
-}
-
-.about{
-    height: 100vh;
-}
-
-.about h1,
 .work h1{
     font-size: 10rem;
     z-index: 0;
     opacity: .5;
     transition: .4s;
 }
-.about h1:hover,
 .work h1:hover{
     opacity: .9;
     color: #ED55ED;
 }
-
-.about .myphoto{
-    width: 150px;
-    box-shadow: 0 0 1.2rem rgba(0, 0, 0, .25);
-    border: 6px solid #fff;
-    border-radius: 100px;
-    position: relative;
-    top: -30px;
-    z-index: 2;
-    left: calc(50% - 100px);
-    right: calc(50% - 100px);
-    transform: translateX(calc(-50% + 100px));
-    transition: 1.4s;
-    perspective: 1000px;
-    transform-style: preserve-3d;
-}
-
-.about-me-info{
-    max-width: 900px;
-    background-color: #252627;
-    box-shadow: 0 0 1.2rem rgba(0, 0, 0, .25);
-    position: relative;
-    top: -70px;
-    left: 50%;
-    right: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-}
-
-.about-me-info p{
-    font-size: 1.3rem;
-    color: #BEBEBE;
-}
-
-.about-me-info p:nth-child(2),
-.about-me-info p:last-child{
-    margin-top: 30px;
-}
-
-/*.about img{
-    width: 300px;
-    top: -300px;
-    left: calc(100% - 100px);
-    right: calc(100% - 100px);
-    transform: translateX(calc(-100% + 100px));
-}*/
 
 .skills{
     margin-top: 50px;
@@ -434,67 +211,6 @@ tbody, tr, .contact{
         font-size: 5rem;
     }
 
-    .navbar{
-        width: 100%;
-        bottom: 0;
-        padding: 0;
-    }
-
-    .lgo,
-    .aLeftbar{
-        display: none;
-    }
-
-    nav{
-        width: 100%;
-    }
-
-    li{
-        width: 25%;
-    }
-
-    a{
-        font-size: .75rem;
-    }
-
-    .leftbar{
-        margin-top: -77px;
-    }
-
-    .about{
-        margin-top: 0;
-        min-height: 740px;
-    }
-    .about-me-info{
-        padding: 40px 30px;
-    }
-
-    .about-me-info p{
-        font-size: 1.1rem;
-        color: #BEBEBE;
-    }
-
-    .text{
-        margin-top: 0px;
-        width: 100%;
-    }
-    .text h1{
-        font-size: 2.5rem;
-    }
-
-    .profile-image{
-        width: 100%;
-    }
-
-    .profile-image img{
-        width: 200px;
-        margin-top: 95px;
-        position: relative;
-        left: calc(50% - 100px);
-        right: calc(50% - 100px);
-        transform: translateX(calc(-50% + 100px));
-    }
-
     .skills-info{
         padding: 10px;
         font-size: 1.2rem;
@@ -534,64 +250,6 @@ tbody, tr, .contact{
         font-size: 6rem;
     }
 
-    .navbar{
-        width: 100%;
-        bottom: 0;
-        padding: 0;
-    }
-
-    .lgo,
-    .aLeftbar{
-        display: none;
-    }
-
-    nav{
-        width: 100%;
-    }
-
-    li{
-        width: 25%;
-    }
-
-    .leftbar{
-        margin-top: -76px;
-    }
-
-    .about{
-        margin-top: 0;
-        min-height: 600px;
-    }
-    .about-me-info{
-        padding: 30px;
-    }
-
-    .about-me-info p{
-        font-size: 1.2rem;
-        color: #BEBEBE;
-    }
-
-    .text{
-        width: 100%;
-        margin-top: 50px;
-    }
-    .text h1{
-        /*justify-content: center;*/
-        font-size: 2.5rem;
-    }
-
-    .profile-image{
-        width: 100%;
-    }
-
-    .profile-image img{
-        width: 250px;
-        margin-top: 95px;
-        position: relative;
-        left: calc(50% - 100px);
-        right: calc(50% - 100px);
-        transform: translateX(calc(-50% + 100px));
-    }
-
     .skills-info{
         padding: 10px;
         font-size: 1.2rem;
@@ -625,43 +283,8 @@ tbody, tr, .contact{
         /*border: 3px solid #ED5565;*/
     }
 
-    .navbar{
-        top: 0;
-    }
-
-    li{
-        list-style: none;
-        width: 120px;
-        transition: .4s;
-    }
-
-    .leftbar{
-        margin-top: 77px;
-    }
-
-    .about{
-        margin-top: 77px;
-        min-height: 580px;
-    }
-    .about-me-info{
-        padding: 50px;
-    }
-
     .main-info-section{
         padding: 0 50px 0 50px;
-    }
-
-    .text{
-        margin-top: 120px;
-    }
-    .text h1{
-        font-size: 2.4rem;
-    }
-
-    .profile-image img{
-        width: 300px;
-        margin-top: 95px;
-        margin-left: 40px;
     }
 
     .skills{
@@ -694,58 +317,6 @@ tbody, tr, .contact{
     .container{
         padding: 0 100px 0 100px;
         /*border: 3px solid #ED5565;*/
-    }
-
-    .navbar{
-        top: 0;
-    }
-    .navbar.sticky{
-        position: fixed;
-        left: 0;
-        right: 0;
-        width: 100%;
-        transition: .4s;
-        padding: 10px 130px;
-    }
-    .navbar.sticky h1{
-        color: #707070;
-        transition: .6s;
-    }
-    .navbar.sticky a{
-        transition: .6s;
-    }
-
-    li{
-        list-style: none;
-        width: 150px;
-        transition: .4s;
-    }
-
-    .leftbar{
-        margin-top: 77px;
-    }
-
-    .text{
-        margin-top: 120px;
-    }
-    .text h1{
-        font-size: 3rem;
-    }
-
-    .main-info-section{
-        min-height: 580px;
-    }
-    .about{
-        margin-top: 77px;
-        min-height: 300px;
-    }
-    .about-me-info{
-        padding: 50px;
-    }
-
-    .profile-image img{
-        width: 500px;
-        margin-top: 50px;
     }
 
     .skills{

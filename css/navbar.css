@@ -1,0 +1,195 @@
+.navbar{
+    background-color: #181818;
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    left: 0;
+    right: 0;
+    transition: .4s;
+}
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.header-left{
+    display: block;
+}
+
+header h1,
+header a,
+.text p,
+.about h1,
+.skills h1,
+.work h1,
+.contact h1{
+    color: #707070;
+}
+
+header h1,
+header a{
+    color: #707070;
+    transition: .4s;
+}
+header h1:hover,
+header a:hover{
+    color: #ED55ED;
+}
+
+nav ul,
+.main-info-section,
+.work-category{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.lgo h1 a{
+    font-size: 1em;
+    text-transform: none;
+    padding: 20px 0;
+}
+
+nav ul{
+    height: 100%;
+}
+
+li{
+    list-style: none;
+    transition: .4s;
+}
+li:hover{
+    background-color: #444;
+}
+
+a{
+    display: flex;
+    text-decoration: none;
+    font-size: .9rem;
+    text-transform: uppercase;
+    padding: 30px 0;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.leftbar{
+    display: none;
+    background-color: #181818;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 101;
+}
+
+.ul-leftbar{
+    display: block;
+}
+
+.ul-leftbar li{
+    padding: 15px 0;
+    width: 200px;
+}
+
+@media screen and (max-width: 480px) {
+    .navbar{
+        width: 100%;
+        bottom: 0;
+        padding: 0;
+    }
+
+    .lgo,
+    .aLeftbar{
+        display: none;
+    }
+
+    nav{
+        width: 100%;
+    }
+
+    li{
+        width: 25%;
+    }
+
+    a{
+        font-size: .75rem;
+    }
+
+    .leftbar{
+        margin-top: -77px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .navbar{
+        width: 100%;
+        bottom: 0;
+        padding: 0;
+    }
+
+    .lgo,
+    .aLeftbar{
+        display: none;
+    }
+
+    nav{
+        width: 100%;
+    }
+
+    li{
+        width: 25%;
+    }
+
+    .leftbar{
+        margin-top: -76px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+    .navbar{
+        top: 0;
+    }
+
+    li{
+        list-style: none;
+        width: 120px;
+        transition: .4s;
+    }
+
+    .leftbar{
+        margin-top: 77px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .navbar{
+        top: 0;
+    }
+    .navbar.sticky{
+        position: fixed;
+        left: 0;
+        right: 0;
+        width: 100%;
+        transition: .4s;
+        padding: 10px 130px;
+    }
+    .navbar.sticky h1{
+        color: #707070;
+        transition: .6s;
+    }
+    .navbar.sticky a{
+        transition: .6s;
+    }
+
+    li{
+        list-style: none;
+        width: 150px;
+        transition: .4s;
+    }
+
+    .leftbar{
+        margin-top: 77px;
+    }
+}
