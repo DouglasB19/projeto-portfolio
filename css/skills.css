@@ -2,15 +2,12 @@
     margin-top: 50px;
 }
 
-.skills h1,
-.contact h1{
+.skills h1{
     text-align: right;
-    font-size: 10rem;
     opacity: .5;
     transition: .4s;
 }
-.skills h1:hover,
-.contact h1:hover{
+.skills h1:hover{
     opacity: .9;
     color: #ED55ED;
 }
@@ -76,10 +73,18 @@ div[class^='bar-']{
     .skills{
         height: 100vh;
     }
+    
+    .skills h1{
+        font-size: 10rem;
+    }
 }
 
 @media screen and (min-width: 1200px) {
     .skills{
         height: 100vh;
+    }
+
+    .skills h1{
+        font-size: 10rem;
     }
 }

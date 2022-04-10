@@ -1,6 +1,5 @@
 .main-info-section{
     /*height: calc(100vh - 81.6px);*/
-    margin-top: 80px;
     background: url("/img/wallhaven-rd3xvm.jpg") no-repeat center;
     background-size: cover;
 }
@@ -73,7 +72,7 @@ span.m-left{
         width: 100%;
     }
     .text h1{
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .profile-image{
@@ -115,6 +114,9 @@ span.m-left{
 }
 
 @media screen and (min-width: 769px) and (max-width: 1199px) {
+    .main-info-section{
+        margin-top: 80px;
+    }
     .text{
         margin-top: 120px;
     }
@@ -132,6 +134,7 @@ span.m-left{
 @media screen and (min-width: 1200px) {
     .main-info-section{
         min-height: 580px;
+        margin-top: 80px;
     }
 
     .text{
