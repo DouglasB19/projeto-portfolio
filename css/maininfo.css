@@ -4,6 +4,11 @@
     background-size: cover;
 }
 
+.text{
+    background-color: rgba(37, 38, 39, .97);
+    box-shadow: 0 0 1.2rem rgb(0 0 0 / 25%);
+}
+
 .text h1{
     color: #fff;
     cursor: context-menu;
@@ -119,6 +124,7 @@ span.m-left{
     }
     .text{
         margin-top: 120px;
+        padding: 25px;
     }
     .text h1{
         font-size: 2.4rem;
@@ -133,12 +139,14 @@ span.m-left{
 
 @media screen and (min-width: 1200px) {
     .main-info-section{
-        min-height: 580px;
         margin-top: 80px;
+        height: 580px;
     }
 
     .text{
         margin-top: 120px;
+        margin-bottom: 50px;
+        padding: 25px;
     }
     
     .text h1{
