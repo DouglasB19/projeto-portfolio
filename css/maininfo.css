@@ -5,8 +5,9 @@
 }
 
 .text{
-    background-color: rgba(37, 38, 39, .97);
+    background-color: rgba(37, 38, 39, .9);
     box-shadow: 0 0 1.2rem rgb(0 0 0 / 25%);
+    z-index: 0;
 }
 
 .text h1{
@@ -37,6 +38,17 @@ span.m-left{
     font-size: .8rem;
 }
 
+a{
+    display: flex;
+    text-decoration: none;
+    font-size: .9rem;
+    text-transform: uppercase;
+    padding: 30px 0;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+}
+
 .text a{
     padding: 12px 25px;
     background-color: none;
@@ -45,7 +57,7 @@ span.m-left{
     font-size: .8rem;
     letter-spacing: 2px;
     position: relative;
-    top: 80px;
+    top: 60px;
     overflow: hidden;
     transition: .5s;
     display: inline-block;
@@ -54,7 +66,6 @@ span.m-left{
 .text a:hover{
     color: #fff;
 }
-
 .text a::before{
     content: '';
     background-color: #ED55ED;
@@ -145,7 +156,7 @@ span.m-left{
 
     .text{
         margin-top: 120px;
-        margin-bottom: 50px;
+        height: 380px;
         padding: 25px;
     }
     
