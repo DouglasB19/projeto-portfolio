@@ -56,7 +56,7 @@ form input:last-child:hover{
 .resultado{
     display: none;
     width: 70%;
-    margin: 20px 15% 10px 15%;
+    margin: 10px 15% 15px 15%;
     background-color: #ffd5ff;
     text-align: center;
     padding: 15px;

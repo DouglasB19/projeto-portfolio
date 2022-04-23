@@ -131,14 +131,17 @@ a{
 
 @media screen and (min-width: 769px) and (max-width: 1199px) {
     .main-info-section{
-        margin-top: 80px;
+        margin-top: 77px;
+        height: 500px;
     }
     .text{
         margin-top: 120px;
-        padding: 25px;
+        height: 300px;
+        padding: 13px;
     }
     .text h1{
-        font-size: 2.4rem;
+        font-size: 2.3rem;
+        margin-top: 5px;
     }
 
     .profile-image img{
@@ -150,7 +153,7 @@ a{
 
 @media screen and (min-width: 1200px) {
     .main-info-section{
-        margin-top: 80px;
+        margin-top: 77px;
         height: 580px;
     }
 
@@ -164,4 +167,8 @@ a{
         font-size: 3rem;
     }
 
+    .profile-image img{
+        width: 410px;
+        margin-top: 120px;
+    }
 }
