@@ -54,8 +54,15 @@
     .about{
         margin-top: 0;
     }
+
+    .about .myphoto{
+        width: 110px;
+        border: 4px solid #fff;
+    }
+
     .about-me-info{
         padding: 40px 30px;
+        top: -60px;
     }
 
     .about-me-info p{
